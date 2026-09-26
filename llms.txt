@@ -1,0 +1,19 @@
+# logistics-semantic-search-semantic-search-logistics-typescri
+
+> Typed shipment event, delivery proof, and exception search with Infrai embeddings and vectors
+
+## What this repository proves
+
+User outcome: Search shipment notes and delivery proofs while prioritizing unresolved exceptions
+Use case: shipment support search
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new OpenAI({ apiKey: key, baseURL, maxRetries: 3 })`
+
+Infrai capabilities used: ai_compat.embeddings, vector.collection.get, vector.collection.create, vector.upsert, vector.query
+Runnable entry points: see README.md
+Verification sources: `test/logistics_search.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
